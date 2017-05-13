@@ -4,6 +4,7 @@ pipeline {
     stage('init') {
       steps {
         sleep 10
+        echo 'Init Ende'
       }
     }
     stage('done') {
