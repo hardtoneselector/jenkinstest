@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'odroid'
+    }
+    
+  }
   stages {
     stage('init') {
       steps {
