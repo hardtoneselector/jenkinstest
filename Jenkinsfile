@@ -3,8 +3,23 @@ pipeline {
   stages {
     stage('init') {
       steps {
-        sleep 10
-        echo 'Init Ende'
+        parallel(
+          "init": {
+            echo 'JENKINS: INIT'
+            sleep 5
+            echo 'INIT: ENDE'
+            sleep 5
+            
+          },
+          "test": {
+            sleep 5
+            
+          },
+          "": {
+            echo 'tghz'
+            
+          }
+        )
       }
     }
     stage('done') {
