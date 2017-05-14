@@ -3,23 +3,8 @@ pipeline {
   stages {
     stage('init') {
       steps {
-        parallel(
-          "init": {
-            echo 'JENKINS: INIT'
-            sleep 5
-            echo 'INIT: ENDE'
-            sleep 5
-            
-          },
-          "test": {
-            sleep 5
-            
-          },
-          "": {
-            echo 'tghz'
-            
-          }
-        )
+        echo 'init'
+        sh 'apk --update add --no-cache mercurial git'
       }
     }
     stage('done') {
