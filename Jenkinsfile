@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'init'
         sh 'apk --update add --no-cache mercurial git'
+        sh 'apk --update add --no-cache docker'
       }
     }
     stage('done') {
