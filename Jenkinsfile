@@ -4,7 +4,7 @@ pipeline {
     stage('init') {
       steps {
         echo 'init'
-        sh 'echo $UUID'
+        isUnix()
       }
     }
     stage('done') {
