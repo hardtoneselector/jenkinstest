@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'init'
         isUnix()
-        git(url: 'github.com:hardtoneselector/core.git', branch: '1.5', changelog: true, poll: true, credentialsId: 'hardtoneselector')
+        git(url: 'https://github.com/zikula/core.git', branch: '1.5', changelog: true, poll: true, credentialsId: 'hardtoneselector')
       }
     }
     stage('done') {
