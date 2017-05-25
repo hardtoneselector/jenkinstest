@@ -4,7 +4,7 @@ pipeline {
     stage('init') {
       steps {
         echo 'init'
-        sh 'apk update'
+        sh 'echo $UUID'
       }
     }
     stage('done') {
