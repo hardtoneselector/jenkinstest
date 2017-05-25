@@ -15,6 +15,6 @@ apk upgrade'''
     }
   }
   environment {
-    PATH = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    PATH = '/bin/sh'
   }
 }
