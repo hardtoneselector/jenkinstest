@@ -4,8 +4,9 @@ pipeline {
     stage('init') {
       steps {
         echo 'init'
-        sh 'apk --upgrade'
-        sh 'apk --update add --no-cache docker'
+        sh '''apk update
+'''
+        sh 'apk upgrade'
       }
     }
     stage('done') {
