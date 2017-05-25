@@ -1,5 +1,11 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'ngingx:latest'
+      args '-p 8001:80'
+    }
+    
+  }
   stages {
     stage('init') {
       steps {
