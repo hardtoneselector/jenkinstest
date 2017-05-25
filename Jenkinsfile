@@ -4,6 +4,8 @@ pipeline {
     stage('init') {
       steps {
         echo 'init'
+        sh '''apk update
+apk upgrade'''
       }
     }
     stage('done') {
